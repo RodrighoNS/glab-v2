@@ -5,7 +5,7 @@ RSpec.describe "expenses/show", type: :view do
     @expense = assign(:expense, Expense.create!(
       item: "Item",
       amount: 2,
-      status: "Status"
+      payment_status: true
     ))
   end
 
@@ -13,6 +13,6 @@ RSpec.describe "expenses/show", type: :view do
     render
     expect(rendered).to match(/Item/)
     expect(rendered).to match(/2/)
-    expect(rendered).to match(/Status/)
+    expect(rendered).to match(/Payment Status/)
   end
 end

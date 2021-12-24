@@ -5,7 +5,7 @@ RSpec.describe "expenses/new", type: :view do
     assign(:expense, Expense.new(
       item: "MyString",
       amount: 1,
-      status: "MyString"
+      payment_status: true
     ))
   end
 
@@ -18,7 +18,7 @@ RSpec.describe "expenses/new", type: :view do
 
       assert_select "input[name=?]", "expense[amount]"
 
-      assert_select "input[name=?]", "expense[status]"
+      assert_select "input[name=?]", "expense[payment_status]"
     end
   end
 end

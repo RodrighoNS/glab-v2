@@ -6,12 +6,12 @@ RSpec.describe "expenses/index", type: :view do
       Expense.create!(
         item: "Item",
         amount: 2,
-        status: "Status"
+        payment_status: true
       ),
       Expense.create!(
         item: "Item",
         amount: 2,
-        status: "Status"
+        payment_status: true
       )
     ])
   end
@@ -20,6 +20,6 @@ RSpec.describe "expenses/index", type: :view do
     render
     assert_select "tr>td", text: "Item".to_s, count: 2
     assert_select "tr>td", text: 2.to_s, count: 2
-    assert_select "tr>td", text: "Status".to_s, count: 2
+    assert_select "tr>td", text: "Payment Status", count: 2
   end
 end
