@@ -7,7 +7,7 @@
     <tr>
       <th>Item</th>
       <th>Amount</th>
-      <th>Status</th>
+      <th>Payment Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= expense.item %></td>
         <td><%= expense.amount %></td>
-        <td><%= expense.status %></td>
+        <td><%= expense.payment_status %></td>
         <td><%= link_to 'Show', expense %></td>
         <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
         <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>

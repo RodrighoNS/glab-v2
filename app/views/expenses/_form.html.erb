@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :amount %>
-    <%= form.number_field :amount %>
+    <%= form.number_field :amount, step: 0.1%>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.label :payment_status %>
+    <%= form.select :payment_status, options_for_select([['Unpaid', 'unpaid'], ['Paid', 'paid']], (@expense.payment_status)) %>
   </div>
 
   <div class="actions">
