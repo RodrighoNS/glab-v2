@@ -11,8 +11,22 @@ Allows you to add, list, update and delete expenses as well as mark them as paid
 bundle install
 ```
 
+- Migrate and seed the db:
+
+```bash
+rake db:migrate && rake db:seed
+```
+
 - Run the server:
 
 ```bash
 rails s
+```
+
+## Testing
+
+- Run testing suite:
+
+```bash
+rake spec
 ```
