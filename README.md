@@ -1,25 +1,18 @@
-# README
+# GarageLab Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Small application to manage expense reporting.
+Allows you to add, list, update and delete expenses as well as mark them as paid. Delivers the total due according to the amount of unpaid expenses.
 
-Things you may want to cover:
+## Install and run
 
-* Ruby version
+- Install dependencies:
 
-* System dependencies
+```bash
+bundle install
+```
 
-* Configuration
+- Run the server:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# glab-v2
+```bash
+rails s
+```
