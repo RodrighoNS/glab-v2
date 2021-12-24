@@ -4,8 +4,8 @@ RSpec.describe "expenses/show", type: :view do
   before(:each) do
     @expense = assign(:expense, Expense.create!(
       item: "Item",
-      amount: 2,
-      payment_status: true
+      amount: 2.0,
+      payment_status: 'unpaid'
     ))
   end
 
