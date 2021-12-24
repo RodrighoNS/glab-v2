@@ -17,6 +17,12 @@ bundle install
 rake db:migrate && rake db:seed
 ```
 
+- Install Webpacker:
+
+```bash
+rails webpacker:install
+```
+
 - Run the server:
 
 ```bash
