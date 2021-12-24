@@ -4,6 +4,7 @@ class ExpensesController < ApplicationController
   # GET /expenses or /expenses.json
   def index
     @expenses = Expense.all
+    @total_debt = total_debt
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -58,6 +59,12 @@ class ExpensesController < ApplicationController
   end
 
   private
+
+    # GET total amount from the Sum of unpaid Expenses
+    def total_debt
+      Expense.all.where(payment_status: 'unpaid').sum(:amount).to_f
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_expense
       @expense = Expense.find(params[:id])

@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New Expense', new_expense_path %>
+
+<br>
+
 <h1>Expenses</h1>
 
 <table>
@@ -16,7 +20,7 @@
     <% @expenses.each do |expense| %>
       <tr>
         <td><%= expense.item %></td>
-        <td><%= expense.amount %></td>
+        <td>$<%= expense.amount %></td>
         <td><%= expense.payment_status %></td>
         <td><%= link_to 'Show', expense %></td>
         <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
@@ -26,6 +30,6 @@
   </tbody>
 </table>
 
-<br>
+<h2>Total debt: $<%= @total_debt =%></h2>
 
-<%= link_to 'New Expense', new_expense_path %>
+<br>

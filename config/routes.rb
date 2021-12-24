@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'expenses/total_debt', to: 'expenses#total_debt', as: :total_debt
+
   resources :expenses
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
